@@ -27,16 +27,17 @@ function writePassword() {
         }
         var value = ""
         if(capLet) {
-          concat(value += cap);
+          value.concat(cap);
         } if(lowLet)  {
-          concat(value += low);
+          value.concat(low);
         } if(spChar) {
-          concat(value += char);
+          value.concat(char);
           
+          console.log(value);
 
-        } for(i = 0, i < length, i++) {
-          var newPass = Math.floor(Math.random() * value);
-        }
+        }// for(i = 0, i < length, i++) {
+          //var newPass = Math.floor(Math.random() * value);
+       // }
      }
   } //return newPass
 } 
