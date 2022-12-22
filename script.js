@@ -7,45 +7,41 @@ var cap = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N",
 
 var char = [" ", "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"]
 
-// var value =[];
+ var value =[];
 
 // Write password to the #password input
-function writePassword() {
+function writePassword(){
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+passwordText.value = password;
 
-  function generatePassword(){
-     var length = prompt("How long do you want your password");
-     if(isNaN(length)) {
-      alert("Please enter a number")
-     } else {
-        if(length < 8 || length > 128) {
-          alert("Please keep password length between 8-128 characters"); }
-        } else {
-         var capLet = confirm("Use capital letters?");
-         if(capLet) {
-           var value = cap
-         }
-          var lowLet = confirm("Use lower case letters?");
-          if(lowLet) {
-            var newValue = value.concat(low)
-          }
-          var spChar = confirm("Use special characters?");
-          if(spChar) {
-            var allArray = newValue.concat(char)
-          }
-        }
-       
-          for(i = 0, i < length, i++) {
-           if(i === length) {
-             Math.floor(Math.random() * allArray.length);
-         }
-        } 
-      
-   }
-  } 
+function generatePassword(){
+  var lengths = prompt("How long do you want your password?");
+  if(isNaN(lengths)){
+    alert("Please enter a number");
+  } else {
+    if(lengths < 8 || lengths > 128){
+    alert("Please select a number between 8-128");
+  } else { 
+    var capLet = confirm("Use capitat letters?");
+    if(capLet){
+      value = value + cap;
+    }  var lowLet = confirm("Use lower case letters?");
+    if(lowLet){
+      value = value + low;
+    } var spChar = confirm("Use special characters?");
+    if(spChar){
+      value = value + char;
+    } for (var i =0; i < lengths; i++) {
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+      var index = Math.floor(Math.random() * value[i])
+      var newPass = index;
+    }
+    
+
+  } return newPass
+}
+}
+} 
+generateBtn.addEventListener("click", writePassword)
