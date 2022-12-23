@@ -59,7 +59,6 @@ function generatePassword(){
 }
 } 
 generateBtn.addEventListener("click", writePassword)
-console.log("this is low,cap, char, num" + cap + low + char + num)
 
 
 
