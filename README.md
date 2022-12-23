@@ -11,7 +11,7 @@
 
 ## Description 
 
-[Visit the Deployed Site](https://youtu.be/BFyeuLhjcPY)
+[Visit the Deployed Site](https://brettsantor.github.io/password-generator/)
 
 Welcome to my Password Generator Site! Tired of trying to think of strong passwords? Let my generator help you out! It can create a password including the alphabet in capital and lowercase, numbers and special characters all at your choosing. It will generate a password from 8 characters long up to 128 characters long, you decide!
 
